@@ -123,7 +123,7 @@ class BotController {
 
       // Route to appropriate handler
       // Auth/General commands (work for all)
-      if (['register', 'login', 'logout', 'verify', 'profile', 'help'].includes(command)) {
+      if (['register', 'login', 'logout', 'verify', 'profile', 'help', 'owner', 'about', 'feedback', 'stats'].includes(command)) {
         result = await authHandler.handleAuthCommand(command, args, from, phoneNumber);
       }
       
@@ -139,9 +139,9 @@ class BotController {
       }
       
       // Merchant commands
-      else if (['orders', 'products', 'store', 'analytics', 'dashboard', 'add-product', 'edit-product', 
+      else if (['merchant', 'orders', 'products', 'store', 'analytics', 'dashboard', 'add-product', 'edit-product', 
                 'delete-product', 'accept', 'reject', 'update-status', 'store-status', 'store-hours', 
-                'store-profile', 'settings'].includes(command)) {
+                'store-profile', 'settings', 'performance', 'customers', 'feedback', 'boost', 'tips'].includes(command)) {
         try {
           await authMiddleware.requireMerchant(phoneNumber);
           result = await merchantHandler.handleMerchantCommand(command, args, from, phoneNumber);
@@ -153,7 +153,7 @@ class BotController {
       // Customer commands
       else if (['menu', 'm', 'search', 'categories', 'nearby', 'store', 'add', 'cart', 'c', 'remove',
                 'clear', 'checkout', 'pay', 'orders', 'reorder', 'track', 'status', 'rate', 'favorites',
-                'addresses', 'deals'].includes(command)) {
+                'addresses', 'deals', 'trending', 'promo', 'featured'].includes(command)) {
         result = await customerHandler.handleCustomerCommand(command, args, from, phoneNumber);
       }
       

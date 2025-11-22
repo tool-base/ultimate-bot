@@ -11,14 +11,16 @@ class CommandParser {
     this.commandRegex = new RegExp(`^${this.escapeRegex(this.prefix)}(\\w+)(?:\\s+(.*))?$`, 'i');
     this.intentPatterns = [
       { regex: /i want|i\'d like|can i get|order|buy|give me|get me/i, intent: 'order' },
-      { regex: /show|list|menu|what\'s|what do you|products|see|view|browse/i, intent: 'browse' },
+      { regex: /show|list|menu|what\'s|what do you|products|see|view|browse|trending|popular|deals|promotion/i, intent: 'browse' },
       { regex: /add|put|include|cart/i, intent: 'add_to_cart' },
       { regex: /remove|delete|take out/i, intent: 'remove_from_cart' },
       { regex: /checkout|pay|payment|confirm|place order|proceed/i, intent: 'checkout' },
       { regex: /track|status|where is|when|delivery|where's/i, intent: 'track' },
       { regex: /hello|hi|hey|greetings|start|welcome/i, intent: 'greet' },
-      { regex: /help|commands|what can|assistance|how to/i, intent: 'help' },
-      { regex: /my profile|account|settings|preferences|my info/i, intent: 'profile' },
+      { regex: /help|commands|what can|assistance|how to|contact|owner|info|about/i, intent: 'help' },
+      { regex: /my profile|account|settings|preferences|my info|feedback/i, intent: 'profile' },
+      { regex: /promo|code|discount|voucher|offer|save/i, intent: 'promotions' },
+      { regex: /stats|analytics|performance|sales|revenue|metrics/i, intent: 'analytics' },
     ];
   }
 

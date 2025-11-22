@@ -310,64 +310,102 @@ Test that bot handles errors gracefully:
 
 ## 📱 WhatsApp Bot Commands
 
-### 👤 Customer Commands
+### 👤 General Commands (All Users)
 
-| Command | Usage | Example | Response |
-|---------|-------|---------|----------|
+| Command | Usage | Purpose |
+|---------|-------|---------|
+| `!owner` | `!owner` | Get bot owner contact info |
+| `!about` | `!about` | Learn about the platform |
+| `!feedback` | `!feedback <message>` | Send feedback |
+| `!stats` | `!stats` | View platform statistics |
+| `!help` | `!help [command]` | Show all commands |
+
+### 🛒 Customer Commands
+
+| Command | Usage | Example | Purpose |
+|---------|-------|---------|---------|
 | `!register` | `!register [name]` | `!register John Smith` | Creates account |
-| `!login` | `!login <email> <password>` | `!login john@email.com pass123` | Logs in user |
+| `!login` | `!login` | — | Login with OTP |
+| `!verify` | `!verify <code>` | `!verify 123456` | Verify with OTP |
 | `!menu` / `!m` | `!menu` | — | Shows all products |
-| `!search` | `!search [query]` | `!search chicken` | Finds matching products |
-| `!add` | `!add [product] [qty]` | `!add sadza 2` | Adds to cart |
+| `!search` | `!search [query]` | `!search pizza` | Finds matching products |
+| `!categories` | `!categories` | — | View categories |
+| `!nearby` | `!nearby` | — | Stores near you |
+| `!store` | `!store [id]` | — | Store details |
+| `!add` | `!add [id] [qty]` | `!add prod_001 2` | Adds to cart |
 | `!cart` / `!c` | `!cart` | — | Shows formatted cart |
-| `!remove` | `!remove [product]` | `!remove sadza` | Removes from cart |
+| `!remove` | `!remove [#]` | `!remove 3` | Removes from cart |
 | `!clear` | `!clear` | — | Empties entire cart |
 | `!checkout` / `!pay` | `!checkout` | — | Places order |
-| `!status` | `!status [order-id]` | `!status abc123` | Checks order status |
-| `!orders-history` | `!orders-history` | — | Shows past 5 orders |
-| `!profile` | `!profile` | — | Shows profile info |
-| `!preferences` | `!preferences lang en` | — | Sets preferences |
-| `!help` | `!help` | — | Shows all commands |
+| `!track` / `!status` | `!track [id]` | `!track ORD123` | Checks order status |
+| `!orders` | `!orders` | — | Order history |
+| `!reorder` | `!reorder [id]` | — | Reorder from history |
+| `!rate` | `!rate [id] [1-5]` | `!rate ORD123 5` | Rate order |
+| `!favorites` | `!favorites [add/remove]` | — | Manage favorites |
+| `!addresses` | `!addresses [list/add]` | — | Manage addresses |
+| `!deals` | `!deals` | — | View special offers |
+| `!trending` | `!trending` | — | See top items |
+| `!promo` | `!promo` | — | View promo codes |
+| `!featured` | `!featured` | — | Featured merchants |
+| `!profile` | `!profile` | — | View profile |
 
 ### 🏪 Merchant Commands
 
 | Command | Usage | Purpose |
 |---------|-------|---------|
-| `!orders` | `!orders` | View all orders |
-| `!orders` | `!orders confirmed` | Filter by status |
-| `!dashboard` | `!dashboard` | Business stats |
+| `!merchant orders [new/today/week]` | `!merchant orders new` | View orders |
+| `!merchant accept <id>` | — | Accept order |
+| `!merchant reject <id>` | — | Reject order |
+| `!merchant update-status <id> <status>` | — | Update status |
+| `!merchant products` | — | List products |
+| `!merchant add-product` | — | Add new product |
+| `!merchant edit-product <id>` | — | Edit product |
+| `!merchant delete-product <id>` | — | Delete product |
+| `!merchant store` | — | Store profile |
+| `!merchant store-status [open/closed]` | — | Update status |
+| `!merchant store-hours <open> <close>` | — | Set hours |
+| `!merchant analytics [today/week]` | — | View analytics |
+| `!merchant dashboard` | — | Quick overview |
+| `!merchant performance` | — | Sales metrics |
+| `!merchant customers [list]` | — | Customer insights |
+| `!merchant feedback <id>` | — | View feedback |
+| `!merchant boost` | — | Promotion packages |
+| `!merchant tips` | — | Success strategies |
+| `!merchant settings` | — | Manage settings |
 
-### 🤖 Admin Commands
+### 👨‍💼 Admin Commands
 
 | Command | Usage | Purpose |
 |---------|-------|---------|
-| `!merchants` | `!merchants` | List all merchants |
-| `!platform` | `!platform` | Platform stats |
-| `!health` | `!health` | System health |
-
-### 🧪 Testing Commands
-
-| Command | Usage | Purpose |
-|---------|-------|---------|
-| `!test` | `!test` | Full bot self-test |
-| `!help` | `!help` | Show all commands |
+| `!admin merchants [pending/approved]` | — | List merchants |
+| `!admin approve <id>` | — | Approve merchant |
+| `!admin reject <id>` | — | Reject merchant |
+| `!admin suspend <id>` | — | Suspend merchant |
+| `!admin sales [today/week]` | — | View sales |
+| `!admin stats` | — | Platform stats |
+| `!admin logs [errors/users]` | — | View logs |
+| `!admin broadcast <msg>` | — | Send broadcast |
+| `!admin alerts` | — | System alerts |
 
 ### 💬 Natural Language Support
 
 Bot understands **without commands** (no `!` prefix):
 
 ```
-"I want 2 sadza and chicken please"
+"I want 2 pizzas please"
 → Intent: "order" → Shows options
 
 "Show me the menu"
 → Intent: "browse" → Displays menu
 
 "Check my order"
-→ Intent: "status" → Asks for order ID
+→ Intent: "track" → Asks for order ID
 
 "Hello, I need help"
 → Intent: "greet" → Welcome message
+
+"What are your promotions?"
+→ Intent: "promotions" → Shows deals
 
 "random text abc xyz"
 → No intent → Message ignored (smart filtering)

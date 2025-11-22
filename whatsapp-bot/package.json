@@ -4,13 +4,13 @@
   "description": "Smart WhatsApp Ordering Bot for SMEs using Baileys",
   "main": "bot.js",
   "scripts": {
-    "start": "node enhanced-bot.js",
-    "dev": "nodemon enhanced-bot.js",
+    "start": "node bot-modular.js",
+    "dev": "nodemon bot-modular.js",
     "api": "node api-server.js",
     "api:dev": "nodemon api-server.js",
     "all": "concurrently \"npm run start\" \"npm run api\"",
-    "bot:legacy": "node bot.js",
-    "bot:dev": "nodemon enhanced-bot.js"
+    "bot:legacy": "node enhanced-bot.js",
+    "bot:dev": "nodemon bot-modular.js"
   },
   "dependencies": {
     "@adiwajshing/keyed-db": "^0.2.4",
