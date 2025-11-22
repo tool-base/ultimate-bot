@@ -75,17 +75,22 @@ class BotController {
 
       // Empty or too short
       if (!trimmed || trimmed.length < 2) {
+        logger.debug('Message too short');
         return;
       }
 
+      logger.info(`📝 Processing: "${trimmed}"`);
+
       // Command-based routing
       if (commandParser.isCommand(trimmed)) {
+        logger.info(`🎯 Command detected: "${trimmed}"`);
         return await this.handleCommand(trimmed, from, phoneNumber, sock);
       }
 
       // Natural language intent detection
       const intent = commandParser.detectIntent(trimmed);
       if (intent) {
+        logger.info(`💡 Intent detected: ${intent}`);
         return await this.handleNaturalLanguage(trimmed, intent, from, phoneNumber, sock);
       }
 
@@ -103,12 +108,13 @@ class BotController {
   async handleCommand(text, from, phoneNumber, sock) {
     const parsed = commandParser.parseCommand(text);
     if (!parsed) {
+      logger.warn(`Failed to parse command: "${text}"`);
       return;
     }
 
     const { command, args } = parsed;
 
-    logger.debug(`Command: ${command}, Args: ${args.join(' ')}`);
+    logger.info(`✅ Command: ${command}, Args: [${args.join(', ')}]`);
 
     try {
       // Check command rate limit
@@ -124,6 +130,7 @@ class BotController {
       // Route to appropriate handler
       // Auth/General commands (work for all)
       if (['register', 'login', 'logout', 'verify', 'profile', 'help', 'owner', 'about', 'feedback', 'stats'].includes(command)) {
+        logger.info(`→ Routing to authHandler: ${command}`);
         result = await authHandler.handleAuthCommand(command, args, from, phoneNumber);
       }
       
@@ -232,15 +239,21 @@ class BotController {
    * Send command response
    */
   async sendCommandResponse(sock, to, result) {
+    logger.info(`📤 Sending response: ${JSON.stringify(result).substring(0, 100)}`);
+    
     if (result.error) {
+      logger.warn(`⚠️  Command error: ${result.error}`);
       await this.sendMessage(sock, to, MessageFormatter.formatError(result.error));
+      return;
     }
 
     if (result.message) {
+      logger.info(`✉️  Sending message response`);
       await this.sendMessage(sock, to, result.message);
     }
 
     if (result.notifyUser) {
+      logger.info(`🔔 Notifying user: ${result.notifyUser.phone}`);
       const userPhone = `${result.notifyUser.phone}@s.whatsapp.net`;
       await this.sendMessage(sock, userPhone, result.notifyUser.message);
     }
@@ -252,6 +265,7 @@ class BotController {
   async sendMessage(sock, to, message, options = {}) {
     try {
       if (!message || !message.trim()) {
+        logger.debug(`Message is empty, skipping`);
         return;
       }
 
@@ -260,11 +274,12 @@ class BotController {
         ...options,
       };
 
+      logger.info(`📨 Sending to ${to}: ${message.substring(0, 50)}...`);
       await sock.sendMessage(to, msgOptions);
-      logger.debug(`Message sent to ${to.split('@')[0]}`);
+      logger.success(`✅ Message sent to ${to.split('@')[0]}`);
 
     } catch (error) {
-      logger.error(`Failed to send message to ${to}`, error);
+      logger.error(`❌ Failed to send message to ${to}`, error);
       
       // Store for retry
       await cache.addToRetryQueue({

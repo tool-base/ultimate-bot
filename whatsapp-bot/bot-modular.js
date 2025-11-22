@@ -213,9 +213,23 @@ class SmartWhatsAppBotModular {
       try {
         const message = m.messages[0];
         
-        if (!message.message || message.key.fromMe) {
+        if (!message) {
+          logger.debug('No message in upsert event');
           return;
         }
+
+        if (!message.message) {
+          logger.debug('Message has no content');
+          return;
+        }
+
+        if (message.key.fromMe) {
+          logger.debug('Ignoring own message');
+          return;
+        }
+
+        const text = message.message.conversation || message.message.extendedTextMessage?.text || '';
+        logger.info(`📨 Received message: "${text.substring(0, 60)}"`);
 
         // Main message processor
         await botController.handleMessage(message, this.sock);
@@ -229,8 +243,6 @@ class SmartWhatsAppBotModular {
     this.sock.ev.on('groups.update', async (updates) => {
       logger.debug(`Group update received: ${updates.length} updates`);
     });
-
-    this.displayStartupInfo();
   }
 
   displayStartupInfo() {
