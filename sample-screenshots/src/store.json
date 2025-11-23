@@ -1,0 +1,505 @@
+{
+  "120363421231495768@g.us": {
+    "AC20E29D9D3DE7D534FDCD3286B3CF0B": {
+      "sender": "78289301418110@s.whatsapp.net",
+      "text": ".ping",
+      "timestamp": 1762134446
+    },
+    "AC46BBB37A6435AC9CBAB3D5A319924B": {
+      "sender": "78289301418110@s.whatsapp.net",
+      "text": ".menu",
+      "timestamp": 1762134458
+    },
+    "ACFCE69D85EDCA8C1B12B9E49F63047B": {
+      "sender": "78289301418110@s.whatsapp.net",
+      "text": ".help",
+      "timestamp": 1762135766
+    },
+    "AC02778E54E481D6A95050F108A37C31": {
+      "sender": "78289301418110@s.whatsapp.net",
+      "text": ".help",
+      "timestamp": 1762136519
+    }
+  },
+  "263781564004:19@s.whatsapp.net": {
+    "BAE541CCFB22EE99": {
+      "sender": "263781564004:19@s.whatsapp.net",
+      "text": "An error occurred:\n\nError Description: TypeError: Cypher.sendText is not a function\n    at Object.m.reply (C:\\Users\\User\\Downloads\\Holic_Bot_V1-main\\Holic_Bot_V1-main\\lib\\myfunc.js:364:17)\n    at Cypher (C:\\Users\\User\\Downloads\\Holic_Bot_V1-main\\Holic_Bot_V1-main\\system.js:1315:13)",
+      "timestamp": {
+        "low": 1762134579,
+        "high": 0,
+        "unsigned": true
+      }
+    },
+    "BAE53DDB85894E41": {
+      "sender": "263781564004:19@s.whatsapp.net",
+      "text": "An error occurred while executing the command: Cannot read properties of undefined (reading 'executePlugin')",
+      "timestamp": {
+        "low": 1762134579,
+        "high": 0,
+        "unsigned": true
+      }
+    },
+    "BAE591044A5D4394": {
+      "sender": "263781564004:19@s.whatsapp.net",
+      "text": "An error occurred while executing the command: Cannot read properties of undefined (reading 'executePlugin')",
+      "timestamp": {
+        "low": 1762134579,
+        "high": 0,
+        "unsigned": true
+      }
+    },
+    "BAE5F20AA2F4F28E": {
+      "sender": "263781564004:19@s.whatsapp.net",
+      "text": "┏━━─『 CYPHER-X 』─━━\n┃ » Username: Him\n┃ » Platform: win32\n┃ » Prefix: [ . ]\n┃ » Mode: Public\n┃ » Version: [ 1.2.0 ]\n┗━━━━━━━━━━━━─···",
+      "timestamp": {
+        "low": 1762135707,
+        "high": 0,
+        "unsigned": true
+      }
+    },
+    "BAE579F2E5DA15CB": {
+      "sender": "263781564004:19@s.whatsapp.net",
+      "text": "┏━━─『 CYPHER-X 』─━━\n┃ » Username: Him\n┃ » Platform: win32\n┃ » Prefix: [ . ]\n┃ » Mode: Public\n┃ » Version: [ 1.2.0 ]\n┗━━━━━━━━━━━━─···",
+      "timestamp": {
+        "low": 1762137411,
+        "high": 0,
+        "unsigned": true
+      }
+    },
+    "BAE5A948F2978634": {
+      "sender": "263781564004:19@s.whatsapp.net",
+      "text": "┏━━─『 CYPHER-X 』─━━\n┃ » Username: Him\n┃ » Platform: win32\n┃ » Prefix: [ . ]\n┃ » Mode: Public\n┃ » Version: [ 1.2.0 ]\n┗━━━━━━━━━━━━─···",
+      "timestamp": {
+        "low": 1762137676,
+        "high": 0,
+        "unsigned": true
+      }
+    }
+  },
+  "status@broadcast": {},
+  "120363403304114825@g.us": {},
+  "120363373420217217@g.us": {
+    "3EB0A4893B9DCA5B726066": {
+      "sender": "147790411870448@s.whatsapp.net",
+      "text": "The North Korean Cyber-Soldier Playbook: Decoding the DPRK's Asymmetric Warfare Arsenal\n\n→https://undercodetesting.com/the-north-korean-cyber-soldier-playbook-decoding-the-dprks-asymmetric-warfare-arsenal/\n\nଳ━━━━━━━━━━━━━━━━ଳ\n_🦑Grp Link: https://undercode.help/whatsapp_\n\n_👨‍💻 Educational purposes!_",
+      "timestamp": 1762135755
+    },
+    "3EB0A8DEA8E641C8BFB3B6": {
+      "sender": "147790411870448@s.whatsapp.net",
+      "text": "🛡️ The 138-Character PowerShell Nightmare: When Code Bloat Creates Security Blind Spots\n\n→https://undercodetesting.com/the-138-character-powershell-nightmare-when-code-bloat-creates-security-blind-spots/\n\nଳ━━━━━━━━━━━━━━━━ଳ\n_🦑Grp Link: https://undercode.help/whatsapp_\n\n_👨‍💻 Educational purposes!_",
+      "timestamp": 1762136508
+    },
+    "3EB06BD6A0BE6DA42A0941": {
+      "sender": "147790411870448@s.whatsapp.net",
+      "text": "🚨 Unmasking HikvisionExploiter: The Automated Toolkit Hijacking Your IP Cameras\n\n→https://undercodetesting.com/unmasking-hikvisionexploiter-the-automated-toolkit-hijacking-your-ip-cameras/\n\nଳ━━━━━━━━━━━━━━━━ଳ\n_🦑Grp Link: https://undercode.help/whatsapp_\n\n_👨‍💻 Educational purposes!_",
+      "timestamp": 1762150995
+    },
+    "3EB06C8D3A9CC27B1F5280": {
+      "sender": "147790411870448@s.whatsapp.net",
+      "text": "🛡️ From Penetration Tester to Pro: The Ultimate Command Arsenal for Cloud, API, and AI Security\n\n→https://undercodetesting.com/from-penetration-tester-to-pro-the-ultimate-command-arsenal-for-cloud-api-and-ai-security/\n\nଳ━━━━━━━━━━━━━━━━ଳ\n_🦑Grp Link: https://undercode.help/whatsapp_\n\n_👨‍💻 Educational purposes!_",
+      "timestamp": 1762151736
+    },
+    "3EB07E9058270763E77A6B": {
+      "sender": "147790411870448@s.whatsapp.net",
+      "text": "🛒 The Sales Engineer's Arsenal: 25+ Essential Commands to Bridge the Technical Divide\n\n→https://undercodetesting.com/the-sales-engineers-arsenal-25-essential-commands-to-bridge-the-technical-divide/\n\nଳ━━━━━━━━━━━━━━━━ଳ\n_🦑Grp Link: https://undercode.help/whatsapp_\n\n_👨‍💻 Educational purposes!_",
+      "timestamp": 1762152485
+    },
+    "3EB03FF4A1315CB4C02C54": {
+      "sender": "47674673913911@s.whatsapp.net",
+      "text": "🚨 Global Data Breach Crisis: Proton Exposes Hundreds of Millions of Stolen Credentials on the Dark Web\n\n→http://undercodenews.com/global-data-breach-crisis-proton-exposes-hundreds-of-millions-of-stolen-credentials-on-the-dark-web/\n\nଳ━━━━━━━━━━━━━━━━ଳ\n_🦑 Grp Link: https://undercode.help/whatsapp_",
+      "timestamp": 1762152816
+    },
+    "3EB0AAD1D1B0026EFE6860": {
+      "sender": "147790411870448@s.whatsapp.net",
+      "text": "🚨 The Silent Attackers: How to Exploit VPC Endpoints and Steal S3 Data Without a CloudTrail Log\n\n→https://undercodetesting.com/the-silent-attackers-how-to-exploit-vpc-endpoints-and-steal-s3-data-without-a-cloudtrail-log/\n\nଳ━━━━━━━━━━━━━━━━ଳ\n_🦑Grp Link: https://undercode.help/whatsapp_\n\n_👨‍💻 Educational purposes!_",
+      "timestamp": 1762153247
+    }
+  },
+  "27651288933-1586384267@g.us": {
+    "AC62CD84FCE20BABD5623C6AE0C82EB5": {
+      "sender": "49409924554763@s.whatsapp.net",
+      "text": "Follow this link to join my WhatsApp group: https://chat.whatsapp.com/EXAIDxvGK9Y49Y0BsvKX9F?mode=wwt",
+      "timestamp": 1762154225
+    }
+  },
+  "120363423411971366@g.us": {
+    "A515438A94132B099C9819C18E17C1B5": {
+      "sender": "237404887728232@s.whatsapp.net",
+      "text": ".fakeid passport|OmegaTech|Citizen of Tech /ID:45392939282",
+      "timestamp": 1762135993
+    },
+    "SUKI97D9198DF7FE7C93": {
+      "sender": "268680889938162@s.whatsapp.net",
+      "text": "⏳ Generating novelty passport...",
+      "timestamp": 1762136005
+    }
+  },
+  "263782085924@s.whatsapp.net": {
+    "3F7A88C7979524CB58E0": {
+      "sender": "263782085924@s.whatsapp.net",
+      "text": "Ttts wy l said gud luck n wt wre u still doing awake",
+      "timestamp": 1762136595
+    },
+    "3FDDA0E2C83D438FDA2A": {
+      "sender": "263782085924@s.whatsapp.net",
+      "text": "😂ey addictive]",
+      "timestamp": 1762136613
+    }
+  },
+  "120363422047695754@g.us": {},
+  "120363418106479021@g.us": {},
+  "263781564004@s.whatsapp.net": {},
+  "120363393526687591@g.us": {
+    "AC6EB594042C0A3E6C2866547712CD17": {
+      "sender": "23064595165394@s.whatsapp.net",
+      "text": "No , your payment will stay frozen until you decide what to do with it.\n\n\n1. Generate a Voucher Code \n\nThis is if you're buying for a friend \n\n2. Apply the paid plan to the current device \n\nWhen you apply to the current device the countdown begins immediately and you're given access to the net . So you can literally pay today and use the plan 2 years after. Same with vouchers , only when it's used does the count begin",
+      "timestamp": 1762150477
+    },
+    "ACA6B70EDBA7DEFF97BFBF36D2AF3686": {
+      "sender": "23064595165394@s.whatsapp.net",
+      "text": "But all this is up to the discretion of the client and can be modified at will",
+      "timestamp": 1762150503
+    },
+    "A56E8B0E7262FA91283804869E3A67AF": {
+      "sender": "263689903042572@s.whatsapp.net",
+      "text": "You are saying if I make payment and use for 30 mins and realize I have any emergency.will I come back and resume or it's over the hour is gone",
+      "timestamp": 1762150665
+    },
+    "A52AE6EA82ABFE46AED9756099D36F0D": {
+      "sender": "263689903042572@s.whatsapp.net",
+      "text": "Okay nevermind it's extreme but it happens",
+      "timestamp": 1762150737
+    },
+    "AC7675FC759ED9B7672D40D65CC5151F": {
+      "sender": "23064595165394@s.whatsapp.net",
+      "text": "You,  the client decide how you want to handle that scenario",
+      "timestamp": 1762150748
+    },
+    "AC46A04A8A795219B102086F1F60C89D": {
+      "sender": "23064595165394@s.whatsapp.net",
+      "text": "I simply implement",
+      "timestamp": 1762150773
+    },
+    "A5875C204F284CE25B5F29B916A86FA3": {
+      "sender": "263689903042572@s.whatsapp.net",
+      "text": "Like  sometimes the network might bad that's why ndabvunza",
+      "timestamp": 1762150905
+    },
+    "AC9439D0EC0B21FF2E7A5CCD5A94D99C": {
+      "sender": "23064595165394@s.whatsapp.net",
+      "text": "Am like a builder, I work with the plan and resources available.  If you say allow em access we allow em",
+      "timestamp": 1762150999
+    },
+    "A500D92062BEE36802F98607FAAC4BB1": {
+      "sender": "263689903042572@s.whatsapp.net",
+      "text": "I am not saying implement  off course it depends on the client, just how are you handling the scenarios",
+      "timestamp": 1762151179
+    },
+    "AC2518A7D0CEFAB52EDBF1E11F18DED2": {
+      "sender": "23064595165394@s.whatsapp.net",
+      "text": "If the day expires , the. You'll still be able to log in but you gotta renew to access the internet.",
+      "timestamp": 1762151682
+    },
+    "A5A7CEC829E04EF6BB9FB9404EFBD460": {
+      "sender": "263689903042572@s.whatsapp.net",
+      "text": "Yah works but  if they was way it pause count down  , but it's unnecessary but gaya if you pay for month and only available for 2 weeks lol.or you change device watonyura 🤣🤣. unnecessary but zvinoitika",
+      "timestamp": 1762152202
+    },
+    "A5D6A3BAFC5AC52A3F0E4EE6C784B3B1": {
+      "sender": "263689903042572@s.whatsapp.net",
+      "text": "Ndo advantage retoken you not pinned to one device",
+      "timestamp": 1762152253
+    },
+    "AC58063BFEDACD7F5D002EBCEB5C3E84": {
+      "sender": "23064595165394@s.whatsapp.net",
+      "text": "If the Hotspot owner is Mr Crabs then 😅, I SpongeBob, the chef can't help you. I do what the boss says",
+      "timestamp": 1762152312
+    },
+    "A54006C38E8AAE846017108BBDCA731C": {
+      "sender": "263689903042572@s.whatsapp.net",
+      "text": "🤣🤣 I am not saying implement",
+      "timestamp": 1762152432
+    },
+    "A59861A514A3ED8FF9E1A9D575AC0774": {
+      "sender": "263689903042572@s.whatsapp.net",
+      "text": "It's one client but what about other clients.The issue about masystems people wants mafeatures.the zvinosiyana masystems mafeatures",
+      "timestamp": 1762152620
+    },
+    "ACBE323A14B0F2D2034B10ABA87FCD7D": {
+      "sender": "23064595165394@s.whatsapp.net",
+      "text": "Yea so am not tied up to the nitty gritty , just take the bigger picture",
+      "timestamp": 1762152795
+    },
+    "A5E8562E7F121CA9630EE5FE72D56556": {
+      "sender": "263689903042572@s.whatsapp.net",
+      "text": "Fine baba great work",
+      "timestamp": 1762153061
+    },
+    "AC65C95340D3AD0557CA1791DE01D7FF": {
+      "sender": "23064595165394@s.whatsapp.net",
+      "text": "Anx",
+      "timestamp": 1762153321
+    },
+    "AC71EAA1C5DE2D1E6F62E81BD9DFFAA6": {
+      "sender": "219004761329686@s.whatsapp.net",
+      "text": "Haa achembera ngaachi retire kk",
+      "timestamp": 1762154048
+    },
+    "ACA1BF14102A686EDFAB4450E5E71E83": {
+      "sender": "219004761329686@s.whatsapp.net",
+      "text": "Vanhu vachiri ku googler here 😄",
+      "timestamp": 1762154156
+    },
+    "ACD2EFE1DB68E1B7C4B5561B3BDD7A0B": {
+      "sender": "219004761329686@s.whatsapp.net",
+      "text": "Hachagoni kana ku chooser t-shirt. Ma skin tight munhu avanedumbu rakadaro 😅",
+      "timestamp": 1762154268
+    },
+    "AC744DE59DB8CAB19F66EFA62A2056C5": {
+      "sender": "23064595165394@s.whatsapp.net",
+      "text": "_Introducing the EcoCaptive Pilot Program 💡_\nJoin our exclusive pilot program to test and refine EcoCaptive before its public launch! We're inviting a small group of early adopters to get hands-on access, provide feedback, and enjoy discounted pricing.\n\n_Pilot Pricing (3 months) 🌐_\n\n### EcoCaptive Cloud (Managed)\n- Setup: $5 one-time\n- Monthly: $25/month\n- Hosting: Managed by us\n- Best for: Cafés, small offices, and shops seeking plug-and-play simplicity\n\n### EcoCaptive Self-Host (Local)\n- Setup: $5 one-time\n- Monthly: $10/month\n- Hosting: Self-hosted\n- Best for: Tech-savvy users seeking full control\n\n_Both plans include:_\n- User login portal\n- Voucher system\n- Basic usage analytics\n- Seamless MikroTik integration\n- Automatic updates\n- Email and chat support during the pilot\n\n_Post-Pilot Pricing 📈_\n- _EcoCaptive Standard (Self-Hosted)_\n    - Setup: $50\n    - Monthly: $20/month\n    - Features: Secure portal, vouchers, user control, cloud backups\n- _EcoCaptive Pro (Cloud)_\n    - Setup: $50\n    - Monthly: $30/month\n    - Features: Fully hosted, custom branding, analytics dashboard, priority support\n\n_Pilot Benefits 🤝_\n- Grandfathered pilot rate\n- 3 months of Pro features for free\n- Personalized support\n\n_Pilot Goal 🎯_\n- Validate the product with real-world usage and feedback\n- De-risk the rollout\n- Collect insights for a scalable SaaS model\n\n_Who is this for? 🤔_\n- Café or restaurant owners offering guest Wi-Fi\n- Small offices, schools, or co-working spaces\n- MikroTik enthusiasts seeking easy access control\n\n_Join the Pilot 🚀_\nLimited to the first 9/10 testers. Message me to reserve a spot and share your MikroTik setup details.",
+      "timestamp": 1762154820
+    }
+  },
+  "120363350698087168@g.us": {},
+  "120363145203508508@g.us": {},
+  "120363417957540197@g.us": {
+    "B5A73ADA7C9D19F3307A0AD256DB2DB3": {
+      "sender": "210561409224909@s.whatsapp.net",
+      "text": "cela ama Nandinandi by bluedot & slave",
+      "timestamp": 1762150966
+    },
+    "ACB72878162137E531E7F1D8829CB084": {
+      "sender": "60452319056007@s.whatsapp.net",
+      "text": "sawbona nawe.",
+      "timestamp": 1762150989
+    },
+    "AC1A1E5726C1720D03FEAB4247B61603": {
+      "sender": "256005954920604@s.whatsapp.net",
+      "text": "ekseni kanje",
+      "timestamp": 1762151060
+    },
+    "AC1F7AABBA45A1FCC722D29C190A0741": {
+      "sender": "256005954920604@s.whatsapp.net",
+      "text": "usuyizwile ibabaza 😞🔥",
+      "timestamp": 1762151088
+    },
+    "93A5B8CE5E82911D2F745F3ED9B1C650": {
+      "sender": "210561409224909@s.whatsapp.net",
+      "text": "Moja ugrend?",
+      "timestamp": 1762151128
+    },
+    "8EEB7F5A6B992DFFE14515BB4C0F1171": {
+      "sender": "210561409224909@s.whatsapp.net",
+      "text": "sengizwile😌🔥🔥🖐🏾.",
+      "timestamp": 1762151238
+    },
+    "AC6EE80FE63CE38A328F773A7C325155": {
+      "sender": "241158756282392@s.whatsapp.net",
+      "text": "https://open.spotify.com/track/08SgRlFYIg0DQpYyBDDImZ?si=-JdpD22YTomiEq8DpIV7Xw",
+      "timestamp": 1762151272
+    },
+    "AC721F5ECF5F491141805D184D799EC4": {
+      "sender": "256005954920604@s.whatsapp.net",
+      "text": "ohho haike",
+      "timestamp": 1762151392
+    }
+  },
+  "120363249873383504@g.us": {},
+  "120363417748506937@g.us": {},
+  "120363401573693055@g.us": {
+    "AC35C049C9E4B9D0BD0FA3755338EE49": {
+      "sender": "25250548940896@s.whatsapp.net",
+      "text": "I share by mistake",
+      "timestamp": 1762151349
+    }
+  },
+  "867051314767696@bot": {
+    "AC7B74B5C067B6DBF2BEE5286607D64A": {
+      "sender": "867051314767696@bot",
+      "text": "Is it possible for a company's share register to have 2 names",
+      "timestamp": 1762151527
+    }
+  },
+  "120363384941684185@g.us": {},
+  "120363420941285018@g.us": {},
+  "178340229062769@s.whatsapp.net": {
+    "AC9EEF33F1EA2BB1BA5C394FFFC20B9D": {
+      "sender": "178340229062769@s.whatsapp.net",
+      "text": "Hey",
+      "timestamp": 1762152002
+    },
+    "AC68EF4FF98C8170A16B99C42281FBED": {
+      "sender": "178340229062769@s.whatsapp.net",
+      "text": "You up?",
+      "timestamp": 1762152006
+    }
+  },
+  "120363403496872488@g.us": {
+    "AC0949D2B2EE9E9D9684681090A9CFFB": {
+      "sender": "47382515454122@s.whatsapp.net",
+      "text": "Morning🌞☕",
+      "timestamp": 1762152881
+    },
+    "ACBCCC7266142C5B1DAAC70DFC13B6EF": {
+      "sender": "47382515454122@s.whatsapp.net",
+      "text": "09:36 eat 5x +\nBetway💥",
+      "timestamp": 1762155320
+    }
+  },
+  "120363423766109950@g.us": {},
+  "120363403636917301@g.us": {
+    "3AE6AFA1F0F736905480": {
+      "sender": "92325304897723@s.whatsapp.net",
+      "text": "😹😹😹😹😹😹😹😹😹😹😹😹",
+      "timestamp": 1762152248
+    }
+  },
+  "120363043433887974@g.us": {},
+  "120363421185722009@g.us": {
+    "ACBDF83EF2BC084060A33690431A5889": {
+      "sender": "132852314337394@s.whatsapp.net",
+      "text": "can I have the group link l want to share to others",
+      "timestamp": 1762152487
+    },
+    "3A8A661F8EA67D2D4462": {
+      "sender": "9376131743932@s.whatsapp.net",
+      "text": "https://chat.whatsapp.com/GeD6GcLntRYF0SFOtgSkMB?mode=wwt",
+      "timestamp": 1762152517
+    },
+    "3A949CA9BA976F5BB530": {
+      "sender": "9376131743932@s.whatsapp.net",
+      "text": "Pro or normal",
+      "timestamp": 1762152538
+    },
+    "AC2CC10C84F3056A14C59EB53ACA3E7E": {
+      "sender": "132852314337394@s.whatsapp.net",
+      "text": "pro",
+      "timestamp": 1762152552
+    },
+    "3A185808B29B76D47981": {
+      "sender": "9376131743932@s.whatsapp.net",
+      "text": "https://chat.whatsapp.com/Et0pUPE3vuODmYVMy3Zyfm?mode=wwt",
+      "timestamp": 1762152717
+    },
+    "A5FC0B4CA7882FA09DA538EA2DE25884": {
+      "sender": "229497819373652@s.whatsapp.net",
+      "text": "May I also have the normal one",
+      "timestamp": 1762152759
+    },
+    "3A7E6F5E838A038DB4A1": {
+      "sender": "9376131743932@s.whatsapp.net",
+      "text": "Here is the normal one",
+      "timestamp": 1762152779
+    },
+    "A5D0284C2CF9DB1C2CFB6446588584AF": {
+      "sender": "229497819373652@s.whatsapp.net",
+      "text": "Thanks",
+      "timestamp": 1762153312
+    }
+  },
+  "263719310381@s.whatsapp.net": {},
+  "120363420994100703@g.us": {
+    "A50E2CA0ACEC55F10D5A0E430E22252A": {
+      "sender": "97522097868931@s.whatsapp.net",
+      "text": ".menu",
+      "timestamp": 1762152948
+    },
+    "A5807DDC938CE42D1BB93C9F1E228F8B": {
+      "sender": "97522097868931@s.whatsapp.net",
+      "text": "20+ ʀᴇᴀᴄᴛs ᴛᴏ ᴜɴʟᴏᴄᴋ +1 ɴᴜᴍʙᴇʀ ɢɪᴠᴇᴀᴡᴀʏ\n> 🥰",
+      "timestamp": 1762153505
+    }
+  },
+  "120363401508780123@g.us": {
+    "AC75FC739CB4BA2CCD3FF71F64F06C98": {
+      "sender": "47382515454122@s.whatsapp.net",
+      "text": "Morning☕☕",
+      "timestamp": 1762152853
+    },
+    "AC1B3D5C6BCD7803EAF252E4196A7072": {
+      "sender": "47382515454122@s.whatsapp.net",
+      "text": "09:36 eat 5x +\nBetway💥",
+      "timestamp": 1762155309
+    }
+  },
+  "120363420069699998@g.us": {},
+  "263781564004:21@s.whatsapp.net": {
+    "BAE52C46244A9BF3": {
+      "sender": "263781564004:21@s.whatsapp.net",
+      "text": "┏━━─『 CYPHER-X 』─━━\n┃ » Username: Him\n┃ » Platform: win32\n┃ » Prefix: [ . ]\n┃ » Mode: Public\n┃ » Version: [ 1.2.0 ]\n┗━━━━━━━━━━━━─···",
+      "timestamp": {
+        "low": 1762153436,
+        "high": 0,
+        "unsigned": true
+      }
+    }
+  },
+  "120363422860257530@g.us": {
+    "A59F65E844FDE5C4144324DE669CB447": {
+      "sender": "263689903042572@s.whatsapp.net",
+      "text": "🤣🤣 okay  . what technologies are you using",
+      "timestamp": 1762153460
+    }
+  },
+  "263778278648@s.whatsapp.net": {
+    "A579A6AD9D8FDF3911AD8192BF5B3BE5": {
+      "sender": "263778278648@s.whatsapp.net",
+      "text": "Yes, a *couple can jointly hold shares* and be issued *one share certificate* with both their names on it. This is called *joint shareholding*, and it's legally allowed in many jurisdictions, including Zimbabwe and South Africa.\n\nKey Points:\n\n- *Yes*, they can jointly hold the 50% (e.g. 500 shares if total is 1000) under *one certificate*.\n- The names will appear as:  \n  *\"Mr. John Ndlovu & Mrs. Mary Ndlovu (Joint Holders)\"*.\n- *Both parties are legally recognized* as co-owners of the shares.\n- On transfer or sale, *both must consent* unless otherwise agreed.\n- In the event of death, many companies follow the *\"right of survivorship\"* — the surviving holder becomes sole owner.\n\nThings to Ensure:\n- Company’s Articles of Association must allow for joint shareholding (most do).\n- The share register must record both names as joint holders.\n- Any share sale agreement should specify the joint structure.\n\nWould you like a sample clause or section to insert into a share sale agreement for this?",
+      "timestamp": 1762153560
+    }
+  },
+  "120363189585937408@g.us": {
+    "A5B0209725E367327C7D7BCA0B624ECC": {
+      "sender": "16192127369221@s.whatsapp.net",
+      "text": "*GOOD MORNING VALUED CUSTOMERS TODAY WE ARE STARTING TAKING ORDERS AND PAYMENTS FOR THIS WEEK MAY YOU PLIZ TAKE NOTE: ALL THOSE WITH MORE THAN R2000 ORDERS TRY AND DO PAYMENTS B4 THURSDAY THANK YOU ALL FOR CHOOSING US 🤝*",
+      "timestamp": 1762155338
+    },
+    "A5F5570B9095089D72320F262243EF3D": {
+      "sender": "16192127369221@s.whatsapp.net",
+      "text": "R120\n\nSize 4-9",
+      "timestamp": 1762155625
+    }
+  },
+  "120363047147322882@g.us": {},
+  "120363401463634376@g.us": {
+    "A525683B98B1FF8BAB7F9522F7BC5C52": {
+      "sender": "97522097868931@s.whatsapp.net",
+      "text": "20+ ʀᴇᴀᴄᴛs ᴛᴏ ᴜɴʟᴏᴄᴋ +1 ɴᴜᴍʙᴇʀ ɢɪᴠᴇᴀᴡᴀʏ\n> 🥰",
+      "timestamp": 1762153753
+    }
+  },
+  "120363404467812310@g.us": {},
+  "120363399216503165@g.us": {
+    "ACCF2267D05262A03C180A5E23FB5A16": {
+      "sender": "121638406365389@s.whatsapp.net",
+      "text": "Happy  Monday limited float available \nOnly 62000 ZIG available rate 34 per $1!\nFirst come First Serve \n USD  available for ZIG now! \nCall for fast response +263781180608\nZipit ✅\nSwipe ✅\nBank transfer ✅DC\nEcocash ✅\nZesa✅\nFees✅\nZimra✅\nZinara✅\nAll universities Polytechnic ✅\nCity Council ✅\nData bundles ✅\nFace to face deals✅\nSim card buddie and netone ✅\nSim Replacement ✅\nCASH INN AND CASH OUT \nhttps://chat.whatsapp.com/IEflVCZLbmYJJaQqAiSTV8?mode=wwc",
+      "timestamp": 1762154800
+    }
+  },
+  "120363401305027566@g.us": {},
+  "120363403534395324@g.us": {},
+  "2349036211461@s.whatsapp.net": {
+    "AC54CB7FF97A56E704889517801304BD": {
+      "sender": "2349036211461@s.whatsapp.net",
+      "text": "I will try",
+      "timestamp": 1762155405
+    }
+  },
+  "120363271607236629@g.us": {
+    "ACB1DF027831D05D40EA06373E9F182B": {
+      "sender": "219400250626106@s.whatsapp.net",
+      "text": "I know, thats why I asked. I also use a samsung",
+      "timestamp": 1762155950
+    }
+  },
+  "27694176088@s.whatsapp.net": {},
+  "78289301418110@s.whatsapp.net": {
+    "3FE23732AF25DC22EC5C": {
+      "sender": "78289301418110@s.whatsapp.net",
+      "text": "!menu",
+      "timestamp": 1763853085
+    }
+  }
+}
