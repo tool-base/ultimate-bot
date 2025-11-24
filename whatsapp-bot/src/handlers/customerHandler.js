@@ -16,6 +16,17 @@ const Logger = require('../config/logger');
 const logger = new Logger('CustomerHandler');
 
 class CustomerHandler {
+  constructor() {
+    this.messageService = null;
+  }
+
+  /**
+   * Set message service for sending replies
+   */
+  setMessageService(messageService) {
+    this.messageService = messageService;
+  }
+
   /**
    * Handle customer commands
    */
@@ -123,7 +134,9 @@ class CustomerHandler {
     // Return beautiful world-class menu
     const menuDisplay = WorldClassResponses.createProductMenu(products, 'All Products');
     
-    return { message: menuDisplay };
+    // Send the message
+    await this.messageService.sendTextMessage(from, menuDisplay);
+    return { success: true };
   }
 
   /**
@@ -131,19 +144,23 @@ class CustomerHandler {
    */
   async handleSearchCommand(query, phoneNumber, from) {
     if (!query || query.length < 2) {
-      return { message: WorldClassResponses.createHelpfulError('NO_PRODUCTS', [
+      const errorMsg = WorldClassResponses.createHelpfulError('NO_PRODUCTS', [
         'Use at least 2 characters',
         'Example: !search pizza'
-      ]) };
+      ]);
+      await this.messageService.sendTextMessage(from, errorMsg);
+      return { success: true };
     }
 
     const response = await backendAPI.searchProducts(query);
     if (!response.success || response.data.length === 0) {
-      return { message: WorldClassResponses.createHelpfulError('NO_PRODUCTS', [
+      const errorMsg = WorldClassResponses.createHelpfulError('NO_PRODUCTS', [
         'Try different keywords',
         'Browse !menu to see all items',
         'Type !categories to explore by type'
-      ]) };
+      ]);
+      await this.messageService.sendTextMessage(from, errorMsg);
+      return { success: true };
     }
 
     const searchDisplay = `
@@ -162,7 +179,8 @@ ${response.data.slice(0, 10).map((p, i) => `║ ${(i + 1).toString().padEnd(2, '
 ╚════════════════════════════════════════╝
     `.trim();
 
-    return { message: searchDisplay };
+    await this.messageService.sendTextMessage(from, searchDisplay);
+    return { success: true };
   }
 
   /**
@@ -193,7 +211,8 @@ ${categories.map((cat, i) => `║ ${(i + 1).toString().padEnd(2, '.')} ${cat.emo
 ╚════════════════════════════════════════╝
     `.trim();
 
-    return { message: categoryDisplay };
+    await this.messageService.sendTextMessage(from, categoryDisplay);
+    return { success: true };
   }
 
   /**
@@ -221,7 +240,8 @@ ${stores.map((store, i) => `║ ${(i + 1).toString().padEnd(2, '.')} ${store.emo
 ╚════════════════════════════════════════╝
     `.trim();
 
-    return { message: nearbyDisplay };
+    await this.messageService.sendTextMessage(from, nearbyDisplay);
+    return { success: true };
   }
 
   /**

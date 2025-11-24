@@ -156,6 +156,15 @@ class SmartWhatsAppBot {
       this.merchantHandler = MerchantHandler;
       this.adminHandler = AdminHandler;
 
+      // Inject messageService into handlers
+      this.customerHandler.setMessageService(this.messageService);
+      if (this.merchantHandler.setMessageService) {
+        this.merchantHandler.setMessageService(this.messageService);
+      }
+      if (this.adminHandler.setMessageService) {
+        this.adminHandler.setMessageService(this.messageService);
+      }
+
       // Setup event handlers
       this.setupEventHandlers(saveCreds);
 
