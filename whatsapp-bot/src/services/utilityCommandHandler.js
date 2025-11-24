@@ -96,11 +96,7 @@ class UtilityCommandHandler {
 "${command}" is not a valid command.
 
 Type !help to see all commands.`;
-      return await this.messageService.sendRichMessage(from, errorMsg, {
-        title: '❌ Command Not Found',
-        description: 'Check the command name and try again',
-        sourceUrl: 'https://smart-bot.io/help'
-      });
+      return await this.messageService.sendTextMessage(from, errorMsg);
     }
 
     const helpText = `${cmd.emoji || '•'} *${cmd.name.toUpperCase()}*
@@ -113,11 +109,7 @@ ${cmd.aliases && cmd.aliases.length > 0 ? `⚡ Aliases: ${cmd.aliases.map(a => `
 
 💡 Category: ${cmd.categoryKey}`;
 
-    return await this.messageService.sendRichMessage(from, helpText, {
-      title: cmd.name,
-      description: cmd.description,
-      sourceUrl: 'https://smart-bot.io/help'
-    });
+    return await this.messageService.sendTextMessage(from, helpText);
   }
 
   getCommandHelp(command) {

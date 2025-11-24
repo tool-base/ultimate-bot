@@ -416,6 +416,11 @@ class SmartWhatsAppBot {
         case 'search':
         case 'categories':
         case 'nearby':
+        case 'shoppingmenu':
+        case 'cartmenu':
+        case 'ordermenu':
+        case 'accountmenu':
+        case 'dealmenu':
           return await this.customerHandler.handleCustomerCommand(command, args, from, cleanPhone);
 
         // Merchant commands
@@ -428,6 +433,15 @@ class SmartWhatsAppBot {
         case 'analytics':
         case 'orders':
           return await this.merchantHandler.handleMerchantCommand(command, args, from, cleanPhone);
+
+        // Group commands
+        case 'groupmenu':
+        case 'grouptools':
+        case 'groupinfo':
+        case 'memberlist':
+        case 'groupstats':
+          return await this.groupManagementHandler?.handleGroupCommand(command, args, from, cleanPhone, isGroup) || 
+                 await this.messageService.sendTextMessage(from, '❌ Group commands not available');
 
         // Admin commands
         case 'merchants':
