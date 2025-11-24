@@ -147,55 +147,34 @@ class CustomerHandler {
   }
 
   /**
-   * !menu or !m
+   * !menu or !m - Show all available commands in interactive format
    */
   async handleMenuCommand(args, phoneNumber, from) {
-    const dummyProducts = [
-      { id: 'prod_001', name: 'Margherita Pizza', price: 2500, rating: 4.8, reviews: 156, merchant: 'Quick Eats', image: '🍕' },
-      { id: 'prod_002', name: 'Fried Chicken Combo', price: 3200, rating: 4.6, reviews: 234, merchant: 'KFC Harare', image: '🍗' },
-      { id: 'prod_003', name: 'Fresh Bread Loaf', price: 450, rating: 4.9, reviews: 89, merchant: 'Local Bakery', image: '🍞' },
-      { id: 'prod_004', name: 'Cold Bottle Coke', price: 350, rating: 4.7, reviews: 445, merchant: 'Refresh Shop', image: '🥤' },
-      { id: 'prod_005', name: 'Beef Burger', price: 1500, rating: 4.5, reviews: 312, merchant: 'Burger King', image: '🍔' },
-      { id: 'prod_006', name: 'Fresh Vegetables Pack', price: 800, rating: 4.8, reviews: 167, merchant: 'Farmers Market', image: '🥬' },
-    ];
-
-    let products = dummyProducts;
     try {
-      // Try to fetch merchants first
-      const merchantsResp = await backendAPI.getAllMerchants();
-      if (merchantsResp?.success && Array.isArray(merchantsResp.data) && merchantsResp.data.length > 0) {
-        const merchantId = merchantsResp.data[0].id;
-        const response = await backendAPI.getProducts(merchantId);
-        if (response?.success && Array.isArray(response.data)) {
-          products = response.data.slice(0, 6);
-        }
+      // Get the all commands menu - shows all available commands organized by category
+      const allCommandsMenu = CommandRegistry.createAllCommandsMenu();
+      
+      if (!allCommandsMenu) {
+        await this.messageService.sendTextMessage(from, '❌ Could not generate menu');
+        return { success: false };
       }
+
+      // Send the interactive list message with all commands
+      await this.messageService.sendInteractiveMessage(from, { listMessage: allCommandsMenu });
+      return { success: true };
     } catch (error) {
-      console.log('✅ Using fallback products for menu');
-      // Keep using dummyProducts
+      logger.error('Menu command error', error);
+      const errorMsg = `❌ *ERROR LOADING MENU*
+
+An error occurred while loading the command menu.
+
+Try again with: !menu
+
+Type !help for more information.`;
+      
+      await this.messageService.sendTextMessage(from, errorMsg);
+      return { success: false };
     }
-
-    // Create interactive list message with product menu
-    const sections = [{
-      title: 'Popular Products',
-      rows: products.slice(0, 6).map(product => ({
-        rowId: `menu_${product.id}`,
-        title: `${product.image} ${product.name}`,
-        description: `ZWL ${product.price.toFixed(0)} | ⭐ ${product.rating}`
-      }))
-    }];
-
-    const menuMessage = {
-      text: '🛍️ *ALL PRODUCTS*\n\nSelect a product to view details and add to cart:',
-      footer: '━━━━━━━━━━━ Smart Bot ━━━━━━━━━━━',
-      sections: sections,
-      buttonText: 'View Products',
-      title: 'Menu'
-    };
-
-    // Send the interactive list message
-    await this.messageService.sendInteractiveMessage(from, { listMessage: menuMessage });
-    return { success: true };
   }
 
   /**
