@@ -35,7 +35,6 @@ const AdvancedAdminHandler = require('./services/advancedAdminHandler');
 const InteractiveMessageHandler = require('./services/interactiveMessageHandler');
 
 // Import utilities
-const CommandParser = require('./utils/commandParser');
 const PrefixManager = require('./utils/prefixManager');
 
 // Import existing handlers
