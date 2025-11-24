@@ -11,27 +11,34 @@ class MessageService {
   }
 
   /**
-   * Send Interactive Button Message
+   * Send Interactive Button Message (Baileys v7 compatible)
    * @param {string} chatId - Recipient chat ID
-   * @param {string} headerText - Header text
    * @param {string} bodyText - Body text
-   * @param {array} buttons - Array of button objects
+   * @param {array} buttons - Array of button objects {text, id}
    * @param {string} footerText - Footer text (optional)
+   * @param {string} headerText - Header text (optional)
    */
-  async sendButtonMessage(chatId, headerText, bodyText, buttons, footerText = '') {
+  async sendButtonMessage(chatId, bodyText, buttons, footerText = '', headerText = '') {
     try {
-      const buttonMessage = {
-        text: bodyText,
-        footer: footerText || 'Smart Bot',
-        buttons: buttons.map((btn, idx) => ({
-          buttonId: `btn_${idx}`,
-          buttonText: { displayText: btn.text },
-          type: 1
-        })),
-        headerType: 1
+      // Baileys v7 format for button messages
+      const buttonPayload = {
+        body: { text: bodyText },
+        footer: { text: footerText || 'Smart Bot' },
+        header: headerText ? { text: headerText } : undefined,
+        nativeFlowMessage: {
+          buttons: buttons.map((btn, idx) => ({
+            name: 'quick_reply',
+            buttonParamsJson: JSON.stringify({
+              display_text: btn.text,
+              id: btn.id || `btn_${idx}`
+            })
+          }))
+        }
       };
 
-      await this.sock.sendMessage(chatId, buttonMessage, { quoted: null });
+      await this.sock.sendMessage(chatId, {
+        interactive: buttonPayload
+      });
       return { success: true };
     } catch (error) {
       console.error(chalk.red('❌ Error sending button message:'), error.message);
@@ -50,22 +57,22 @@ class MessageService {
   async sendListMessage(chatId, buttonText, bodyText, footerText, sections) {
     try {
       const listMessage = {
-        text: bodyText,
-        footer: footerText,
-        sections: sections.map(section => ({
+        body: { text: bodyText },
+        footer: { text: footerText || 'Smart Bot' },
+        sections: sections.map((section, sIdx) => ({
           title: section.title,
-          rows: section.rows.map((row, idx) => ({
-            rowId: `row_${idx}`,
+          rows: section.rows.map((row, rowIdx) => ({
+            id: `row_${sIdx}_${rowIdx}`,
             title: row.title,
-            description: row.description || '',
-            rowImage: row.image || null
+            description: row.description || ''
           }))
         })),
-        buttonText: buttonText || 'Select Option',
-        title: 'Menu'
+        action: {
+          button: buttonText || 'Select Option'
+        }
       };
 
-      await this.sock.sendMessage(chatId, { listMessage }, { quoted: null });
+      await this.sock.sendMessage(chatId, { interactive: { nativeFlowMessage: { buttons: [], messageParamsJson: JSON.stringify(listMessage) } } });
       return { success: true };
     } catch (error) {
       console.error(chalk.red('❌ Error sending list message:'), error.message);
@@ -387,13 +394,48 @@ END:VCARD`;
 
   /**
    * Send Interactive List/Button Message
-   * For WhatsApp's native interactive menus
+   * For WhatsApp's native interactive menus (Baileys v7 compatible)
    * @param {string} chatId - Chat ID
    * @param {object} messagePayload - Full interactive message payload
+   *   If passing { listMessage: {...}}, it will be properly formatted
+   *   If passing { interactive: {...}}, it will be sent as-is
    */
   async sendInteractiveMessage(chatId, messagePayload) {
     try {
-      await this.sock.sendMessage(chatId, messagePayload);
+      // If payload has listMessage, convert to proper Baileys v7 format
+      if (messagePayload.listMessage) {
+        const listMsg = messagePayload.listMessage;
+        const formattedPayload = {
+          body: { text: listMsg.text || '' },
+          footer: { text: listMsg.footer || 'Smart Bot' },
+          sections: Array.isArray(listMsg.sections) ? listMsg.sections.map((section, sIdx) => ({
+            title: section.title,
+            rows: Array.isArray(section.rows) ? section.rows.map((row, rowIdx) => ({
+              id: `row_${sIdx}_${rowIdx}`,
+              title: row.title,
+              description: row.description || ''
+            })) : []
+          })) : [],
+          action: {
+            button: listMsg.buttonText || 'Select Option'
+          }
+        };
+
+        await this.sock.sendMessage(chatId, {
+          interactive: {
+            nativeFlowMessage: {
+              buttons: [],
+              messageParamsJson: JSON.stringify(formattedPayload)
+            }
+          }
+        });
+      } else if (messagePayload.interactive) {
+        // Already in proper format, send as-is
+        await this.sock.sendMessage(chatId, messagePayload);
+      } else {
+        // Fallback for other message types
+        await this.sock.sendMessage(chatId, messagePayload);
+      }
       return { success: true };
     } catch (error) {
       console.error(chalk.red('❌ Error sending interactive message:'), error.message);
